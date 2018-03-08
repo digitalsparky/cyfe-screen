@@ -1,6 +1,6 @@
 # cyfe-screen
 
-An electron app dedicated to running automatic an cyfe dashboard screen
+An electron app dedicated to running an automated cyfe dashboard screen
 
 ## To use:
 
