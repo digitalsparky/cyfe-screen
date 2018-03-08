@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="app.css">
+</head>
+<body id="body">
+    <script>
+        const settings = require('electron').remote.require('electron-settings');
+        const dashboard_id = settings.get('dashboard_id');
+        if (dashboard_id > 0) {
+            const src = "https://app.cyfe.com/dashboards/" + dashboard_id + "/tv";
+            document.getElementById('body').innerHTML = '<webview autosize="on" preload="app.js" disablewebsecurity minwidth="576" minheight="432" src="' + src + '"></webview>';
+        }
+    </script>
+</body>
+</html>

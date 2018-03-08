@@ -1,0 +1,18 @@
+{
+  "name": "cyfe-screen",
+  "version": "1.0.0",
+  "description": "Cyfe Screen",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . app --platform linux --arch x64 --out dist/",
+    "deb64": "electron-installer-debian --src dist/app-linux-x64/ --dest dist/installers/ --arch amd64"
+  },
+  "author": "Matt Spurrier <matthew@spurrier.com.au>",
+  "devDependencies": {
+    "electron": "~1.8.2",
+    "electron-installer-debian": "^0.8.0",
+    "electron-packager": "^11.1.0",
+    "electron-settings": "^3.1.4"
+  }
+}
