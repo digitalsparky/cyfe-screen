@@ -12,7 +12,8 @@ An electron app dedicated to running an automated cyfe dashboard screen
 
 Edit the following configuration file, entering the following contents:
 
-```{
+```json
+{
     "user_email": "",
     "user_pass": "",
     "dashboard_id": ""
