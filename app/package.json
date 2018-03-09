@@ -1,0 +1,14 @@
+{
+  "name": "cyfe-screen",
+  "version": "1.0.0",
+  "description": "Cyfe Screen",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Matt Spurrier <matthew@spurrier.com.au>",
+  "devDependencies": {
+    "electron": "~1.8.2",
+    "electron-settings": "^3.1.4"
+  }
+}
