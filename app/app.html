@@ -7,8 +7,8 @@
 <body id="body">
     <script>
         const settings = require('electron').remote.require('electron-settings');
-        const dashboard_id = settings.get('dashboard_id');
-        if (dashboard_id > 0) {
+        const dashboard_id = settings.get('dashboard_ids')[0];
+        if (dashboard_id) {
             const src = "https://app.cyfe.com/dashboards/" + dashboard_id + "/tv";
             document.getElementById('body').innerHTML = '<webview autosize="on" preload="app.js" disablewebsecurity minwidth="576" minheight="432" src="' + src + '"></webview>';
         }

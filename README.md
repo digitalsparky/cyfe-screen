@@ -16,14 +16,16 @@ Edit the following configuration file, entering the following contents:
 {
     "user_email": "",
     "user_pass": "",
-    "dashboard_id": ""
+    "dashboard_ids": [],
+    "dashboard_rotate": 300
 }
 ```
 
 - user_email is the email address of the user to login
 - user_pass is that users password
-- dashboard_id is the ID visible in the dashboard URL.
+- dashboard_ids is and array of IDs visible in the dashboard URL.
   EG: https://app.cyfe.com/dashboards/123456 would be 123456
+- dashboard_rotate is the time in seconds before rotating to the next dashboard
 
 #### MacOS
 

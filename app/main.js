@@ -5,8 +5,15 @@ let mainWindow
 
 app.on('ready', () => {
   const settings = require('electron-settings');
-  if (!settings.get('dashboard_id')) {
-    console.log("No dashboard ID, please check configuration");
+  if (!settings.get('dashboard_ids')) {
+    console.log("No dashboard id's, please check configuration");
+    if (process.platform !== 'darwin') {
+      app.quit();
+    }
+    return;
+  }
+  if (!settings.get('dashboard_rotate')) {
+    console.log("No dashboard rotate time (seconds), please check configuration");
     if (process.platform !== 'darwin') {
       app.quit();
     }
@@ -22,6 +29,11 @@ app.on('ready', () => {
     })
 
     c({cancel: false, responseHeaders: d.responseHeaders, statusLine: d.statusLine});
+  })
+
+  const dashboardConf = encodeURIComponent(settings.get('dashboard_ids').join(',') + ";" + settings.get('dashboard_rotate'))
+  session.defaultSession.cookies.set({url: 'https://app.cyfe.com', name: 'cyfe-dashboard-tv', value: dashboardConf}, (error) => {
+    if (error) console.error(error)
   })
 
   mainWindow = new BrowserWindow({webPreferences: { webSecurity: false }, kiosk: true, title: "Cyfe Screen", autoHideMenuBar: true, alwaysOnTop: true})
