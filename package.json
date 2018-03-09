@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "setup": "cd app; npm install; cd ..",
+    "setup": "npm install; cd app; npm install; cd ..",
     "build-deb": "electron-builder -l deb"
   },
   "build": {
