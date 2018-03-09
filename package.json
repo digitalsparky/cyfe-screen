@@ -6,7 +6,8 @@
   "build": {
     "appId": "com.digitalsparky.${name}",
     "productName": "${name}",
-    "copyright": "Copyright © 2018 ${author}"
+    "copyright": "Copyright © 2018 ${author}",
+    "npmRebuild": true
   },
   "devDependencies": {
     "electron-builder": "^20.4.0"
