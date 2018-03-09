@@ -5,8 +5,8 @@ An electron app dedicated to running an automated cyfe dashboard screen
 ## To use:
 
 - Git clone the repo
-- To install dependencies run: 'npm script setup'
-- To build the debian app run: 'npm script build-deb'
+- To install dependencies run: 'npm run setup'
+- To build the debian app run: 'npm run build-deb'
   
 ### Configuration
 
