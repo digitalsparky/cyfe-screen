@@ -31,7 +31,7 @@ app.on('ready', () => {
     c({cancel: false, responseHeaders: d.responseHeaders, statusLine: d.statusLine});
   })
 
-  mainWindow = new BrowserWindow({webPreferences: { webSecurity: false }, kiosk: false, title: "Cyfe Screen", autoHideMenuBar: true, alwaysOnTop: true})
+  mainWindow = new BrowserWindow({webPreferences: { webSecurity: false }, kiosk: true, title: "Cyfe Screen", autoHideMenuBar: true, alwaysOnTop: true})
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'app.html'),
     protocol: 'file:',
