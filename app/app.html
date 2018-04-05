@@ -4,14 +4,27 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="app.css">
 </head>
-<body id="body">
+<body>
+    <div id="view"></div>
+
     <script>
         const settings = require('electron').remote.require('electron-settings');
-        const dashboard_id = settings.get('dashboard_ids')[0];
-        if (dashboard_id) {
-            const src = "https://app.cyfe.com/dashboards/" + dashboard_id + "/tv";
-            document.getElementById('body').innerHTML = '<webview autosize="on" preload="app.js" disablewebsecurity minwidth="576" minheight="432" src="' + src + '"></webview>';
+        const rotate_time = settings.get('dashboard_rotate');
+        const dashboards = settings.get('dashboard_ids');
+        
+        var c=0;
+        var m=dashboards.length;
+
+        function updateDashboard() {
+            if (c == m) {
+                c=0;
+            }
+            var src = "https://app.cyfe.com/dashboards/" + dashboards[c] + "/tv";
+            document.getElementById('view').innerHTML='<webview autosize="on" preload="app.js" disablewebsecurity minwidth="576" minheight="432" src="' + src + '"></webview>';
+            c++;
         }
+        updateDashboard()
+        setInterval(updateDashboard, rotate_time*1000);          
     </script>
 </body>
 </html>

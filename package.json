@@ -4,9 +4,9 @@
     "build-deb": "electron-builder -l deb"
   },
   "build": {
-    "appId": "com.digitalsparky.${name}",
-    "productName": "${name}",
-    "copyright": "Copyright © 2018 ${author}",
+    "appId": "com.digitalsparky.cyfe-screen",
+    "productName": "cyfe-screen",
+    "copyright": "Copyright © 2018 Matt Spurrier",
     "npmRebuild": true
   },
   "devDependencies": {

@@ -1,10 +1,11 @@
 {
   "name": "cyfe-screen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cyfe Screen",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "logging": "electron . --enable-logging"
   },
   "author": "Matt Spurrier <matthew@spurrier.com.au>",
   "devDependencies": {
