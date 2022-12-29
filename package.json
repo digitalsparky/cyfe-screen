@@ -10,6 +10,6 @@
     "npmRebuild": true
   },
   "devDependencies": {
-    "electron-builder": "^20.4.0"
+    "electron-builder": "^20.44.4"
   }
 }
