@@ -9,7 +9,7 @@
   },
   "author": "Matt Spurrier <matthew@spurrier.com.au>",
   "devDependencies": {
-    "electron": "~1.8.2"
+    "electron": "~18.3.7"
   },
   "dependencies": {
     "electron-settings": "^3.1.4"
